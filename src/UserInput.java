@@ -16,23 +16,17 @@ public class UserInput {
 		}
 
 		input = scanner.nextLine();
-		while (true){
-			try {
-				return Integer.parseInt(input);
+		while (!check.isInteger(input)){
+			System.out.println("Некорректный ввод!");
+			if(number == 0){
+				System.out.println("Введите число: ");
 			}
-			catch (NumberFormatException e){
-				System.out.println("Некорректный ввод!");
-				if(number == 0){
-					System.out.println("Введите число: ");
-				}
-				else if(number>0){
-					System.out.println("Введите " + number + "-ое число: ");
-				}
-				input = scanner.nextLine();
+			else if(number>0){
+				System.out.println("Введите " + number + "-ое число: ");
 			}
+			input = scanner.nextLine();
 		}
-
-
+		return Integer.parseInt(input);
 	}
 
 	public int inputPositiveInt(int number){

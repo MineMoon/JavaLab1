@@ -1,11 +1,10 @@
 public class Check {
 
 	public boolean isInteger(String str) {
-		try{
+		try {
 			Integer.parseInt(str);
 			return true;
-		}
-		catch(NumberFormatException e){
+		} catch (NumberFormatException e) {
 			return false;
 		}
 	}

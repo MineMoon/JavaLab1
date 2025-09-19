@@ -2,9 +2,9 @@ import java.util.Random;
 
 public class Test {
 
-	Random rand = new Random();
-	UserInput input = new UserInput();
-	String[] days = {"понедельник","вторник","среда","четверг","пятница","суббота","воскресение"};
+	private final Random rand = new Random();
+	private final UserInput input = new UserInput();
+	private final String[] days = {"понедельник","вторник","среда","четверг","пятница","суббота","воскресение"};
 
 
 	public int sumLastNums (int x){
